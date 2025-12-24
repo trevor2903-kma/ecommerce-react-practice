@@ -3,6 +3,11 @@ import { Header } from '../components/Header'
 import { products } from '../../starting-code/data/products.js';
 
 export function HomePage() {
+
+  fetch('http://localhost:3000/api/products')
+    .then((res) => res.json())
+    .then(data => console.log(data))
+
   return (
     <div>
       <link rel="icon" type="image/svg+xml" href="home-favicon.png" />
